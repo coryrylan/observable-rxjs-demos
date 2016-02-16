@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular 2 QuickStart</title>
+</head>
+
+<body>
+    <demo-app>Loading...</demo-app>
+
+    <script src="/lib/system.js"></script>
+    <script src="/lib/typescript.js"></script>
+    <script src="/lib/angular2-polyfills.beta-6.js"></script>
+    <script src="/lib/rx.beta-0.js"></script>
+    <script src="/lib/angular2.beta-6.js"></script>
+    <script src="/lib/angular2-http.beta-6.js"></script>
+
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: { 'src': { defaultExtension: 'ts' } }
+        });
+
+        System.import('/demo-2/src/app');
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Observable Demo</h1>
+
+
+
+    <div id="counter">0</div>
+    <button id="increment" value="1">+</button>
+    <button id="decrement" value="-1">-</button>
+
+
+
+
+    <script src="/lib/system.js"></script>
+    <script src="/lib/rx-global.beta-0.js"></script>
+    <script src="/lib/typescript.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: { 'src': { defaultExtension: 'ts' } }
+        });
+
+        System.import('/demo-1/src/app');
+    </script>
+</body>
+</html>
