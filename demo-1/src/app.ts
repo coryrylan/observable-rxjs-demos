@@ -62,20 +62,19 @@ let incrementBtn = document.getElementById('increment');
 let decrementBtn = document.getElementById('decrement');
 let counter = document.getElementById('counter');
 
-let incrementClick$ = new Observable.fromEvent(incrementBtn, 'click');
-let decrementClick$ = new Observable.fromEvent(decrementBtn, 'click');
+let incrementClick$ = Observable.fromEvent(incrementBtn, 'click');
+let decrementClick$ = Observable.fromEvent(decrementBtn, 'click');
 
-let clicks$ = new Observable
+let clicks$ = Observable
     .merge(incrementClick$, decrementClick$)
-    .map(event => parseInt(event.target.value, 10));
+    .map((event: any) => parseInt(event.target.value, 10));
 
 let total$ = clicks$
     .scan((total, value) => total + value, 0);
 
 total$.subscribe(total => {
-    counter.innerText = total;
+    counter.innerText = total.toString();
 });
-
 
 // ----i------------------>
 // -------d---------d----->
