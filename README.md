@@ -1,5 +1,3 @@
 # observable-rxjs-demos
 
-https://www.npmjs.com/package/http-server
-
-http-server
+This repo has been moved https://github.com/coryrylan/beginner-reactive-programming-with-rxjs
